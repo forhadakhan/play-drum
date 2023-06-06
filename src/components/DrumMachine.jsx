@@ -66,10 +66,18 @@ const DrumMachine = () => {
 
 
     const audioSource = (key) => {
-        const baseURL = window.location.href.replace(/\/$/, '');
         const audioName = bankSwitchChecked ? audio2[key] : audio1[key];
-        return `${baseURL}/src/assets/audio/${audioName}.mp3`;
-    };
+        const isGitHub = window.location.hostname === 'github.com';
+        if (isGitHub) {
+          const baseURL = `https://github.com/forhadakhan/play-drum/blob/main`;
+          return `${baseURL}/src/assets/audio/${audioName}.mp3`;
+        } else {
+          const baseURL = window.location.href.replace(/\/$/, '');
+          return `${baseURL}/src/assets/audio/${audioName}.mp3`;
+        }
+      };
+      
+
 
     const handleClick = (event) => {
         if (powerSwitchChecked) {
