@@ -64,12 +64,11 @@ const DrumMachine = () => {
         };
     };
 
+
     const audioSource = (key) => {
-        if (bankSwitchChecked) {
-            return `src/assets/audio/${audio2[key]}.mp3`;
-        } else {
-            return `src/assets/audio/${audio1[key]}.mp3`;
-        }
+        const baseURL = window.location.href.replace(/\/$/, '');
+        const audioName = bankSwitchChecked ? audio2[key] : audio1[key];
+        return `${baseURL}/src/assets/audio/${audioName}.mp3`;
     };
 
     const handleClick = (event) => {
