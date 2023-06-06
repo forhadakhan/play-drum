@@ -25,11 +25,10 @@ body {
     width: 332px;
     height: 272px;
     display: inline-block;
-    margin: 20px;
+    margin: 5px 20px;
 }
 
 .pad-display {
     width: 332px;
     display: inline-block;
-    margin: 20px;
 }
