@@ -9,3 +9,27 @@ body {
 .min-height-full {
     min-height: 100vh;
 }
+
+.drum-pad {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.pad-bank {
+    width: 332px;
+    height: 272px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.pad-display {
+    width: 332px;
+    display: inline-block;
+    margin: 20px;
+}
