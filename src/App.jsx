@@ -12,6 +12,9 @@ function App() {
                     <h1 className="h3 m-0 text-primary">Play Drum</h1>
                 </div>
                 <DrumMachine />
+                <div className="d-flex align-items-center justify-content-center bg-white mt-5 border rounded-3">
+                    <p className='font-monospace pt-3 px-4 text-secondary'><a href='https://github.com/forhadakhan/' target='_blank'>@forhadakhan</a> coded it. You may find the code <a href='https://github.com/forhadakhan/play-drum' target='_blank'>repository here</a>.</p>
+                </div>
             </div>
         </div>
     )

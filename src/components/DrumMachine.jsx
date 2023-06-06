@@ -105,7 +105,7 @@ const DrumMachine = () => {
 
     return (
         <div id="drum-machine" className="container">
-            <div className='d-flex flex-column align-items-center'>
+            <div className='d-flex flex-column align-items-center mb-5'>
                 <div className="container pad-display" id="switched">
                     <div className="row">
                         <div className="col bg-white m-4 p-2 border rounded-3">
