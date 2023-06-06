@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DrumMachine from './components/DrumMachine';
 import redDrumSvg from './assets/blue-drum-logo.svg';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
                     <img src={redDrumSvg} alt="Red Drum" className="me-2" style={{ width: '40px', height: '40px' }} />
                     <h1 className="h3 m-0 text-primary">Play Drum</h1>
                 </div>
+                <DrumMachine />
             </div>
         </div>
     )
