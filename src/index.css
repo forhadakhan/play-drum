@@ -1,0 +1,11 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+html,
+body {
+    height: 100%;
+}
+
+.min-height-full {
+    min-height: 100vh;
+}
