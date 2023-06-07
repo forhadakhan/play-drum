@@ -84,7 +84,6 @@ const DrumMachine = () => {
     };
 
 
-
     const handleClick = (event) => {
         if (powerSwitchChecked) {
             const audio = event.currentTarget.querySelector('audio');
