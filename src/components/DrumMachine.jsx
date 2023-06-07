@@ -48,8 +48,8 @@ const DrumMachine = () => {
     }, [powerSwitchChecked, bankSwitchChecked]);
 
     const handleKeyPress = (event) => {
+        const key = event.key.toUpperCase();
         if (powerSwitchChecked) {
-            const key = event.key.toUpperCase();
             const drumPad = document.getElementById(key);
             if (drumPad) {
                 const audio = drumPad.querySelector('audio');
@@ -60,7 +60,13 @@ const DrumMachine = () => {
                     audio.play();
                     updateDisplay(bankSwitchChecked ? str2[audioId] : str1[audioId]);
                 }
+            } else if (key === 'P') {
+                handlePowerChange();
+            } else if (key === 'B') {
+                handleBankChange();
             }
+        } else if (key === 'P') {
+            handlePowerChange();
         };
     };
 
