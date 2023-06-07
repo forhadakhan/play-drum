@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const DrumMachine = () => {
     const str1 = [null, 'Heater 1', 'Heater 2', 'Heater 3', 'Heater 4', 'Clap', 'Open HH', 'Kick n\' Hat', 'Kick', 'Close HH']
     const str2 = [null, 'Chord 1', 'Chord 2', 'Chord 3', 'Shaker', 'Open HH', 'Closed HH', 'Punchy Kick', 'Side Stick', 'Snare']
-    const audio1 = [null, 'audio-q', 'audio-w', 'audio-e', 'audio-a', 'audio-s', 'audio-d', 'audio-z', 'audio-x', 'audio-c']
+    const audio1 = [null, 'Heater-1', 'Heater-2', 'Heater-3', 'Heater-4_1', 'Heater-6', 'Dsc_Oh', 'Kick_n_Hat', 'RP4_KICK_1', 'Cev_H2']
     const audio2 = [null, 'Chord_1', 'Chord_2', 'Chord_3', 'Give_us_a_light', 'Dry_Ohh', 'Bld_H1', 'punchy_kick_1', 'side_stick_1', 'Brk_Snr']
 
     const [powerSwitchChecked, setPowerSwitchChecked] = useState(true);
@@ -68,15 +68,14 @@ const DrumMachine = () => {
     const audioSource = (key) => {
         const audioName = bankSwitchChecked ? audio2[key] : audio1[key];
         let baseURL = window.location.href.replace(/\/$/, '');
-        const isGitHub = baseURL === 'https://forhadakhan.github.io/play-drum';
-        if (isGitHub) {
-          baseURL = `https://github.com/forhadakhan/play-drum/blob/main`;
-          return `${baseURL}/src/assets/audio/${audioName}.mp3`;
+        const isLocalhost = baseURL.includes('localhost');
+        if (isLocalhost) {
+            return `${baseURL}/src/assets/audio/${audioName}.mp3`;
         } else {
-          return `${baseURL}/src/assets/audio/${audioName}.mp3`;
+            baseURL = `https://s3.amazonaws.com/freecodecamp/drums`;
+            return `${baseURL}/${audioName}.mp3`;
         }
-      };
-      https://github.com/forhadakhan/play-drum/blob/main/src/assets/audio/audio-q.mp3
+    };
 
 
 
