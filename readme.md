@@ -2,6 +2,7 @@
 
 An interactive web application built with React, allowing users to experiment with different drum sounds and play them. 
 
+### [Try it live](https://forhadakhan.github.io/play-drum/)
 
 ![Screenshot](./src/assets/play_drum.png)
 
@@ -44,8 +45,8 @@ Open your web browser and visit http://localhost:3000 to view the drum machine a
 
 ## Keyboard Controls
 - Press the corresponding _keyboard keys_ (**Q, W, E, A, S, D, Z, X, C**) to play the drum sounds.
-- Ensure that the **power switch** is turned **on** for the keyboard controls to work. 
-- Use **bank switch** to toggle between two sets of drum sounds.
+- Ensure that the **power switch** is turned **on** for the drum pad to work. You can also control the power switch from the keyboard using 'P' key.
+- Use **bank switch** to toggle between two sets of drum sounds. You can also switch banks from the keyboard using 'B' key.
 
 
 ## Credits
